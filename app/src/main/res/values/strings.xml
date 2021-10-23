@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Delt\'app</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="logo_application">Logo Application</string>
+    <string name="delt_app">𝔻𝕖𝕝𝕥\'𝕒𝕡𝕡</string>
+    <string name="email">E-mail</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="connexion">Connexion</string>
+    <string name="noAccount">Pas encore de compte ?</string>
+</resources>
