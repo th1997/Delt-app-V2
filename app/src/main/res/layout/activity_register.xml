@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LoginPage"
+    android:id="@+id/RegisterPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.deltapp.LoginApp">
+    tools:context="com.deltapp.RegisterApp">
 
     <ImageView
         android:id="@+id/logo"
@@ -23,19 +23,18 @@
         android:id="@+id/nameApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
         android:elevation="2dp"
         android:fontFamily="monospace"
         android:text="@string/delt_app"
         android:textSize="33sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/emailLogin"
+        app:layout_constraintBottom_toTopOf="@id/emailRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <EditText
-        android:id="@+id/emailLogin"
+        android:id="@+id/emailRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -50,16 +49,16 @@
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@id/pwdLogin"
+        app:layout_constraintBottom_toTopOf="@id/pwdRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameApp" />
 
     <EditText
-        android:id="@+id/pwdLogin"
+        android:id="@+id/pwdRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
+        android:layout_marginBottom="5dp"
         android:backgroundTintMode="screen"
         android:drawableStart="@drawable/ic_twotone_lock_24"
         android:drawableEnd="@drawable/ic_visibility_on_24"
@@ -69,53 +68,45 @@
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnConnect"
-        app:layout_constraintEnd_toEndOf="@+id/emailLogin"
+        app:layout_constraintBottom_toTopOf="@+id/pwdConfRegister"
+        app:layout_constraintEnd_toEndOf="@+id/emailRegister"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/emailLogin"
-        app:layout_constraintTop_toBottomOf="@+id/emailLogin" />
+        app:layout_constraintStart_toStartOf="@+id/emailRegister"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegister" />
+
+    <EditText
+        android:id="@+id/pwdConfRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:backgroundTintMode="screen"
+        android:drawableStart="@drawable/ic_twotone_lock_24"
+        android:drawableEnd="@drawable/ic_visibility_on_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="@string/confirmation_mot_de_passe"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSubs"
+        app:layout_constraintEnd_toEndOf="@+id/emailRegister"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emailRegister"
+        app:layout_constraintTop_toBottomOf="@+id/pwdRegister" />
 
     <Button
-        android:id="@+id/btnConnect"
+        android:id="@+id/btnSubs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="serif"
-        android:text="@string/connexion"
+        android:text="@string/s_inscrire"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@id/subsButton"
-        app:layout_constraintEnd_toEndOf="@+id/pwdLogin"
-        app:layout_constraintStart_toStartOf="@+id/pwdLogin"
-        app:layout_constraintTop_toBottomOf="@+id/pwdLogin" />
-
-    <Button
-        android:id="@+id/subsButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="#FFF5F5F5"
-        android:text="@string/noAccount"
-        android:fontFamily="serif"
-        android:textAllCaps="false"
-        android:textColor="#FF777777"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/pwdForget"
-        app:layout_constraintEnd_toEndOf="@+id/pwdLogin"
-        app:layout_constraintStart_toStartOf="@+id/pwdLogin"
-        app:layout_constraintTop_toBottomOf="@+id/btnConnect" />
-
-    <TextView
-        android:id="@+id/pwdForget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
-        android:text="@string/mot_de_passe_oubli"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/subsButton"
-        app:layout_constraintTop_toBottomOf="@+id/subsButton" />
-
+        app:layout_constraintEnd_toEndOf="@+id/pwdRegister"
+        app:layout_constraintStart_toStartOf="@+id/pwdRegister"
+        app:layout_constraintTop_toBottomOf="@+id/pwdConfRegister" />
 </androidx.constraintlayout.widget.ConstraintLayout>
