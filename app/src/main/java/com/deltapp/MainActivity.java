@@ -23,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Intent myIntent = new Intent(MainActivity.this, LoginApp.class);
-        MainActivity.this.startActivity(myIntent);
-
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = binding.viewPager;
         viewPager.setAdapter(sectionsPagerAdapter);
@@ -33,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = binding.fab;
         fab.setOnClickListener(view -> {
-            Intent gameActivityIntent = new Intent(MainActivity.this, LoginApp.class);
-            startActivity(gameActivityIntent);
+            Intent myIntent = new Intent(MainActivity.this, LoginApp.class);
+            startActivity(myIntent);
         });
     }
 }
